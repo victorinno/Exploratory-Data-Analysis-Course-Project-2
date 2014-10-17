@@ -1,0 +1,22 @@
+{
+    "contents" : "",
+    "created" : 1413567885498.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "81B3F627",
+    "lastKnownWriteTime" : 7741240723082584096,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "caption" : "NEI",
+        "contentUrl" : "content?title=NEI&file=6dbea75c26b24676b9c953b0d9a510f8.htm",
+        "displayedObservations" : 1000,
+        "displayedVariables" : 7,
+        "totalObservations" : 6497651,
+        "variables" : 6
+    },
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

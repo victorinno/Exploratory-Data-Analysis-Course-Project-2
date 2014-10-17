@@ -1,0 +1,22 @@
+{
+    "contents" : "",
+    "created" : 1413570964676.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "CB4F8A30",
+    "lastKnownWriteTime" : 0,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "caption" : "SCC_filter_sep",
+        "contentUrl" : "content?title=SCC_filter_sep&file=ad37d3013c8041b0bafe48eb1d362bfe.htm",
+        "displayedObservations" : 99,
+        "displayedVariables" : 4,
+        "totalObservations" : 99,
+        "variables" : 4
+    },
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}
