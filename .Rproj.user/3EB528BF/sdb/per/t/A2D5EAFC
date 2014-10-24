@@ -1,0 +1,17 @@
+{
+    "contents" : "library(dplyr)\nlibrary(tidyr)\nlibrary(ggplot2)\n## This first line will likely take a few seconds. Be patient!\n#NEI <- tbl_df(readRDS(\"summarySCC_PM25.rds\"))\n#SCC <- tbl_df(readRDS(\"Source_Classification_Code.rds\"))\nSCC_filter_sep <- select(SCC, SCC, EI.Sector) %>%\n                  filter( grepl(\"Coal\", SCC$EI.Sector)) %>%\n                  separate(EI.Sector, into = c(\"S1\", \"S2\", \"S3\"), sep = \" - \") %>%\n                  filter(S1 == \"Coal\" | S2 == \"Coal\" | S3 == \"Coal\")        \n\nset <- filter(NEI, SCC == SCC_filter_sep$SCC, year = 1999:2008) %>%\n        select(Emissions, year) %>%\n        group_by(year) %>%\n        summarise(Emissions = sum(Emissions))\n  \n  \npng(\"plot4.png\")\nggplot(set, aes(x=set$year, y=set$Emissions/1000000)) +\n  geom_line() + \n  geom_point() +          \n  xlab(\"Years\") +\n  ylab(\"Emissions / 1000000\") +\n  ggtitle(\"Emissions over the years from Coal\")\n\ndev.off()",
+    "created" : 1413556173820.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "13698611",
+    "id" : "A2D5EAFC",
+    "lastKnownWriteTime" : 1413571671,
+    "path" : "~/GitHub/Nova pasta/Exploratory Data Analysis Course Project 2/Exploratory-Data-Analysis-Course-Project-2/plot4.R",
+    "project_path" : "plot4.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : true,
+    "type" : "r_source"
+}
